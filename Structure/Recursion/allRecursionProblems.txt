@@ -1,0 +1,19 @@
+1. Sum of N natural numberes
+2. Factorial of N
+3. Power of a,b
+4. Fibonaci number Nth
+5. Print Numbers in increasing or decresing order
+6. Check if the Array is sorted or not
+7. Find out the first and last occorence of element in a Array
+8. Reverse a String
+9. Replace pi with 3.14 in a String
+10. Towers of Hanoi
+11. Remove All duplicates from a String
+12. Move all x to end of the String
+13. Generate all Substrings of "ABC"
+14. Generate Substrings with ASCII Numbers
+15. Printing all possible words from phone digits
+16. Print all permutations of String "ABC"
+17. Count all possible paths from start to end in board
+18. Count all possible paths from start to end in maze
+

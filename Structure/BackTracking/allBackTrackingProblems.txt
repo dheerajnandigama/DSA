@@ -1,0 +1,9 @@
+1. Subset sum is k or not
+2. Print all Subsets of array {1,2,3}
+3. String Partitioning 
+4. Possible paranthesis of size n
+5. Next Permutation of an array
+6. Interleavings of a String
+7. Palindrome Partitioning
+8. Print all permutaions of ABCD
+9. Rat in a maze problem
