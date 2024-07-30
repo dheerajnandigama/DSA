@@ -1,25 +1,38 @@
+// Find number of distinct elements from subarrays of size k
+// Complexity : N,K
+
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isSafe(vector<vector<int>> &maze, int x, int y, int n)
-{
-  if (x < n && y < n && maze[x][y] == 1)
-  {
-    return true;
-  }
-  return false;
-}
-
-bool ratinMaze(vector<vector<int>> &maze, int x, int y, int n, vector<vector<int>> &sol)
-{
-}
-
 int main()
 {
-  int n = 6;
-  int x = 0;
-  int y = 0;
-  vector<vector<int>> maze(n);
-  vector<vector<int>> sol(n);
+  vector<int> nums = {10, 8, 3, 15, 3, 15, 10, 10, 8, 2};
+  int n = nums.size();
+  int window_size = 4;
+
+  unordered_map<int, int> m;
+
+  for (int i = 0; i < n; i++)
+  {
+    m[nums[i]]++;
+
+    if (i >= window_size)
+    {
+      if (m[nums[i - window_size]] == 1)
+      {
+        m.erase(nums[i - window_size]);
+      }
+      else
+      {
+        m[nums[i - window_size]]--;
+      }
+    }
+
+    if (i >= window_size - 1)
+    {
+      cout << m.size() << endl;
+    }
+  }
+
   return 0;
 }

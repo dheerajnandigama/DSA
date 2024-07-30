@@ -1,26 +1,79 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-   
-    vector<string> s1 = {"wall","ah","wallahah"};
-    vector<string> s2 = {"collegeee","coll","collegge"};
+void display(unordered_map<int, char> &m)
+{
+    for (const auto &x : m)
+    {
+        cout << x.first << " " << x.second << endl;
+    }
+    return;
+}
 
-    unordered_map<char,int> m;
+int main()
+{
+    // Initialization - 1 :
+    unordered_map<int, char> m = {{1, 'a'}, {2, 'b'}, {3, 'c'}};
 
-    for(auto str : s1){
-        for(char c : str){
-            m[c]++;
-        }
+    // Initialization - 2 :
+    m[4] = 'd';
+
+    // Initialization - 3 :
+    m.insert({5, 'e'});
+
+    // Initialization - 4 :
+    m.insert({{6, 'f'}, {7, 'g'}});
+
+    // Access Values - 1 :
+    m[5];
+
+    // Access Values - 2 :
+    m.at(5);
+
+    // Changing Values - 1:
+    m[6] = '6';
+
+    // Changing Values - 2:
+    m.at(7) = '7';
+
+    // Remove Elements
+    m.erase(1);
+
+    // Check if element exist - 1:
+    if (m.find(9) != m.end())
+    {
+        cout << "Found" << endl;
+    }
+    else
+    {
+        cout << "Not Found" << endl;
     }
 
-    for(auto ele : m){
-        if(ele.second % s1.size() != 0){
-            cout<<"Not possible";
-        }
+    // Check if element exist - 2:
+    if (m.count(6))
+    {
+        cout << "Found" << endl;
+    }
+    else
+    {
+        cout << "Not Found" << endl;
     }
 
-    cout<<"Possible";
-    
+    // Size of Map :
+    cout << m.size() << endl;
+
+    // Clear in Map :
+    m.clear();
+
+    // empty() in Map :
+    if (m.empty())
+    {
+        cout << "Empty" << endl;
+    }
+    else
+    {
+        cout << "Not Empty" << endl;
+    }
+
     return 0;
 }
