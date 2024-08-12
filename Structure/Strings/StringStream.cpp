@@ -3,21 +3,28 @@
 // <<: Adds a new string to the StringStream object
 // >>: Reads the content from the StringStream object
 
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
+int main()
+{
     string s = "Welcome to panda";
     stringstream ss(s);
     vector<string> words;
     string temp;
-    while(ss>>temp){
+    cin >> s;
+    while (ss >> temp)
+    {
         words.push_back(temp);
     }
 
-    for(auto e:words){
-        cout<<e<<endl;
+    vector<string> v = {"Welcome", "to", "panda"};
+
+    for (auto x : words)
+    {
+        cout << x;
     }
+    cout << endl;
 
     return 0;
 }

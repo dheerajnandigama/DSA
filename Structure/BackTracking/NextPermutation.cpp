@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    vector<char> v = {'a', 'b', 'c', 'd'};
+    vector<char> v = {'b', 'c', 'a'};
     do
     {
         for (auto x : v)
