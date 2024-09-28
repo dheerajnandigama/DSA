@@ -1,0 +1,7 @@
+Initialization Type	Example	Note
+Default initialization	int x;	In most cases, leaves variable with indeterminate value
+Copy initialization	int x = 5;	
+Direct initialization	int x ( 5 );	
+Direct list initialization	int x { 5 };	Narrowing conversions disallowed
+Copy list initialization	int x = { 5 };	Narrowing conversions disallowed
+Value initialization	int x {};	Usually performs zero initialization

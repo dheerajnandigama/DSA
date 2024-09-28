@@ -1,0 +1,20 @@
+Struct is a way to combine multiple fields to represent a composite data structure.
+
+Example:
+
+we can store details related to a student in a struct consisting of his 
+age (int), first_name (string), last_name (string) and standard (int).
+
+Representation:
+
+struct NewType {
+    type1 value1;
+    type2 value2;
+    .
+    .
+    .
+    typeN valueN;
+};
+
+
+
