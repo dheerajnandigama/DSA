@@ -1,0 +1,42 @@
+I implemented a dynamic array to demonstrate how we can manage dynamic memory, grow the array when needed, 
+and provide functionalities similar to std::vector.
+
+The class has three main data members: a data pointer to store the dynamically allocated array, 
+a capacity to track the total memory allocated, and currentSize to track the number of elements.
+
+In the constructor, I initialize the array with a capacity of 1 and allocate memory for the array using new.
+
+The destructor frees the dynamically allocated memory when the object goes out of scope, preventing memory leaks.
+
+The push_back() function adds new elements to the array. If the array is full, I call a private resize() function, 
+which doubles the capacity, allocates new memory, copies the existing elements, and deletes the old memory.
+
+The resize() function manages the automatic growth of the array. It’s important to resize by doubling the capacity for 
+amortized constant time complexity during multiple insertions.
+
+The size() function returns the number of elements currently stored in the array, making it easy to track usage.
+
+I’ve overloaded the [] operator to provide array-like access to elements. The operator checks if the index is 
+out of bounds and throws an exception if it is, ensuring safe access to elements.
+
+For removing elements, I’ve implemented a pop_back() function. It reduces the size by one, 
+effectively removing the last element without deallocating memory.
+
+I also added a getCapacity() function to let users query the total memory currently allocated for the array.
+
+In the main() function, I demonstrate adding elements to the dynamic array using push_back(), 
+printing elements using the overloaded [] operator, and removing the last element with pop_back().
+
+Some important points to highlight here are efficient memory management, specifically how resizing is done only when necessary, 
+and the fact that resizing doubles the capacity to maintain amortized O(1) performance for insertions.
+
+The operator overloading for [] provides intuitive access, just like how arrays or vectors are used in C++.
+
+Overall, this implementation covers core C++ topics such as dynamic memory management, constructors/destructors, 
+and operator overloading, while ensuring safe and efficient handling of data.
+
+
+
+
+
+

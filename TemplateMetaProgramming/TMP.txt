@@ -1,0 +1,18 @@
+C++ Template Meta-Programming (TMP) is a powerful compile-time programming technique that leverages C++ templates to perform computations 
+during the compilation phase. It enables the creation of generic and highly efficient code by performing operations such as type manipulation, 
+computations, and even recursion at compile-time.
+
+Key Concepts in Template Meta-Programming
+
+Templates: The foundation of TMP is C++ templates, which allow functions and classes to operate with generic types. 
+TMP involves instantiating these templates during the compilation process to achieve desired results.
+
+Recursion: TMP relies heavily on recursion since loops and conditionals (like if, while) aren't available during compilation. 
+Recursive template instantiations are used to perform computations.
+
+SFINAE (Substitution Failure Is Not An Error): This technique allows the compiler to decide which template overload to use based on 
+whether the substitution of types leads to a valid template instantiation. It is commonly used for function overloading in TMP.
+
+Type Traits: These are templates that can introspect and modify types at compile-time. The <type_traits> header in the C++ standard library 
+provides many type traits utilities, such as std::is_same, std::is_integral, and more.
+

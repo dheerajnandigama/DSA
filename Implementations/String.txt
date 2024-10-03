@@ -1,0 +1,47 @@
+I created this custom String class to demonstrate my understanding of C++ features like dynamic memory management, 
+constructors, destructors, and operator overloading.
+
+The class contains two data members: a char* data pointer to hold the string and a size_t length to store the length of the string 
+excluding the null terminator.
+
+First, there's a default constructor that initializes an empty string by setting data to nullptr and length to 0.
+
+Then, the parameterized constructor takes a C-style string. It calculates the length using std::strlen, 
+allocates memory for the string plus the null terminator, and copies the content using std::strcpy.
+
+The copy constructor is responsible for deep copying another String object. It allocates new memory for the copied string 
+to ensure each object has its own copy of the data.
+
+The move constructor optimizes the transfer of resources between objects without deep copying. 
+It transfers ownership of the data pointer from the source object, and then the source object is left in a valid but empty state.
+
+The destructor ensures that when the String object goes out of scope, it frees the dynamically allocated memory to prevent memory leaks.
+
+For the copy assignment operator, I first check for self-assignment. If it's not the same object, 
+I delete the existing memory, allocate new memory, and copy the data from the other object.
+
+The move assignment operator works similarly to the move constructor. It frees the existing memory,
+ takes ownership of the data from the other object, and leaves the source object empty.
+
+I’ve overloaded the + operator to concatenate two strings. It allocates enough memory to hold both strings, 
+then copies the first string and appends the second.
+
+The indexing operator ([]) allows direct access to the characters of the string. 
+I've implemented both const and non-const versions, so it works for both reading and writing characters.
+
+To support output streaming, I overloaded the << operator using a friend function.
+ This lets me easily print the string with std::cout.
+
+In the main() function, I create two String objects, s1 and s2, using the parameterized constructor. 
+Then I concatenate them using the + operator to form s3.
+
+I demonstrate the indexing operator by changing a character in s3 and printing the modified string.
+
+The important points to highlight are proper memory management using new[] and delete[], avoiding memory leaks and double deletes.
+
+I’ve also ensured efficiency with the move constructor and move assignment operator to avoid unnecessary deep copies.
+
+Lastly, operator overloading improves the usability of the class, making it intuitive to use with familiar operators like +, [], and <<.
+
+Overall, this class demonstrates the use of C++ features like RAII (Resource Acquisition Is Initialization), 
+dynamic memory management, and operator overloading to build robust, efficient code.
